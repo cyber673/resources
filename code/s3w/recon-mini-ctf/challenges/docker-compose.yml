@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  web-server:
+    image: web-server
+    ports:
+      - "8080:80"
+  ssh-version:
+    image: ssh-version
+    ports:
+      - "2222:22"
+  web-page-title:
+    image: web-page-title
+    ports:
+      - "8081:80"
+  service-banner:
+    image: service-banner
+    ports:
+      - "9998:9999"
+

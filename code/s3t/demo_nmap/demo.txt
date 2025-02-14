@@ -1,0 +1,5 @@
+nmap -sP 172.35.0.0/24
+nmap -sV target-vm (Version detection)
+nmap -O target-vm (OS detection)
+nmap -A target-vm (Aggressive scan)
+nmap -p 22,80,139,445,9999 target-vm (Specific ports)

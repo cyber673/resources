@@ -1,0 +1,44 @@
+services:
+  target:
+    image: ubuntu:latest
+    container_name: target-vm
+    hostname: target-vm
+    ports:
+      - "2222:22"
+      - "8080:80"
+      - "9999:9999"
+    cap_add:
+      - NET_ADMIN
+    security_opt:
+      - apparmor=unconfined
+    build:
+      context: ./target
+      dockerfile: Dockerfile
+    networks:
+      demo-net:
+        ipv4_address: 172.35.0.2
+
+  attacker:
+    image: ubuntu:latest
+    container_name: attacker-vm
+    hostname: attacker-vm
+    cap_add:
+      - NET_ADMIN
+    security_opt:
+      - apparmor=unconfined
+    stdin_open: true
+    tty: true
+    build:
+      context: ./attacker
+      dockerfile: Dockerfile
+    depends_on:
+      - target
+    networks:
+      demo-net:
+        ipv4_address: 172.35.0.3
+
+networks:
+  demo-net:
+    ipam:
+      config:
+        - subnet: 172.35.0.0/24

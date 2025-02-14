@@ -1,0 +1,44 @@
+version: "3.8"
+
+services:
+  target1:
+    image: alpine/socat
+    command: TCP-LISTEN:2222,fork TCP:host.docker.internal:22
+    hostname: target1
+    networks:
+      inventory_net:
+        ipv4_address: 172.28.0.2
+    cap_add:
+      - NET_ADMIN
+    security_opt:
+      - apparmor:unconfined
+
+  target2:
+    image: alpine/socat
+    command: TCP-LISTEN:2222,fork TCP:host.docker.internal:22
+    hostname: target2
+    networks:
+      inventory_net:
+        ipv4_address: 172.28.0.3
+    cap_add:
+      - NET_ADMIN
+    security_opt:
+      - apparmor:unconfined
+
+  target3:
+    image: alpine/socat
+    command: TCP-LISTEN:2222,fork TCP:host.docker.internal:22
+    hostname: target3
+    networks:
+      inventory_net:
+        ipv4_address: 172.28.0.4
+    cap_add:
+      - NET_ADMIN
+    security_opt:
+      - apparmor:unconfined
+
+networks:
+  inventory_net:
+    ipam:
+      config:
+        - subnet: 172.28.0.0/24
