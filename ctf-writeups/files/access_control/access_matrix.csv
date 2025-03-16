@@ -1,0 +1,9 @@
+Username,Role,Production DB,Admin Portal,API Server,Frontend,Source Code,Analytics,User Support
+amir,Developer,Read-Write,No Access,Full Access,Full Access,Write,Read,No Access
+farah,Designer,No Access,No Access,No Access,Read,Read,Read,No Access
+malik,Developer,Read-Only,No Access,Full Access,Full Access,Write,Read,No Access
+nurul,Admin,Read,Full Access,No Access,No Access,No Access,Full Access,Full Access
+guest,Tester,No Access,No Access,Read-Only,Read-Only,No Access,No Access,No Access
+intern,Intern,Read-Only,No Access,Read-Only,Read-Only,Read,No Access,No Access
+superuser,DevOps,Full Access,Full Access,Full Access,Full Access,Full Access,Full Access,Full Access
+contractor,External Developer,Read-Only,No Access,Read-Write,Read-Write,Write,No Access,No Access

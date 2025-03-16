@@ -1,0 +1,5 @@
+Role,Production DB,Admin Portal,API Server,Frontend,Source Code,Analytics,User Support
+Developer,Read-Only,No Access,Full Access,Full Access,Write,Read,No Access
+Designer,No Access,No Access,No Access,Read,Read,Read,No Access
+Admin,Read,Full Access,No Access,No Access,No Access,Full Access,Full Access
+Founder,Full Access,Full Access,Full Access,Full Access,Full Access,Full Access,Full Access
