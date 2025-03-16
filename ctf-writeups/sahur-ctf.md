@@ -172,7 +172,7 @@ btctf{78mins_phishing_addresses}
 
 ***
 
-## The First Strike
+# The First Strike
 
 #### Description
 
@@ -184,11 +184,14 @@ Note: use the files for the rest of the challenges
 
 #### File(s)
 
-N/A (uses files from other challenges)
+- Security.evtx
 
 #### Solution
 
-WIP
+1. Open security.evtx file using Event Viewer (Windows) or a log viewer tool.
+2. Filter Event ID 4625
+3. Sort by date and time
+4. Look for workspacers user first attempt
 
 #### Flag
 
@@ -206,11 +209,15 @@ Flag format: btctf{IP:PORT}
 
 #### File(s)
 
-N/A (uses files from other challenges)
+- Security.evtx
 
 #### Solution
 
-WIP
+1. Open security.evtx file using Event Viewer (Windows) or a log viewer tool.
+2. Filter Event ID 4625
+3. Sort the date and time
+4. Look for workspacers user first attempt
+5. View the NetworkInformation
 
 #### Flag
 
@@ -228,11 +235,14 @@ Flag format: btctf{x/x/x/x/}
 
 #### File(s)
 
-N/A (uses files from other challenges)
+- Security.evtx
 
 #### Solution
 
-WIP
+1. Open security.evtx file using Event Viewer (Windows) or a log viewer tool.
+2. Filter Event ID 4663
+3. View the ObjectName
+4. Copy the full path
 
 #### Flag
 
@@ -250,11 +260,14 @@ Flag format: btctf{flag}
 
 #### File(s)
 
-N/A (uses files from other challenges)
+- Operational.evtx
 
 #### Solution
 
-WIP
+1. Open operational.evtx file using Event Viewer (Windows) or a log viewer tool.
+2. Filter Event ID 4104
+3. Under general tab
+4. Look for the powershell command at the first sentence
 
 #### Flag
 
@@ -272,11 +285,14 @@ Flag format: btctf{filename}
 
 #### File(s)
 
-N/A (uses files from other challenges)
+- Operational.evtx
 
 #### Solution
 
-WIP
+1. Open operational.evtx file using Event Viewer (Windows) or a log viewer tool.
+2. Filter Event ID 4104
+3. Under general tab
+4. Look for the name of the outfile at the very last sentence
 
 #### Flag
 
