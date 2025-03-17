@@ -320,7 +320,16 @@ None (access through SIEM)
 
 #### Solution
 
-WIP
+1. Access SIEM
+2. Click Menu (Top Left)
+3. Go to Threat Intelligence
+4. Click Threat Hunting
+5. Once in Threat Hunting Page, Go to Events tab
+6. Adjust time appropriately (from 1 year ago to now)
+7. Click add filter (Field: rule.groups; Operator: is; Value: syscheck_file)
+8. Look for the correct timestamp (Mar 14, 2025 @ 15:23:09.015)
+9. Click the "Inspect document details" icon which is on the left of the timestamp
+10. Look for the file name either from the full_log or syscheck.path 
 
 #### Flag
 
@@ -348,7 +357,17 @@ None (access through SIEM)
 
 #### Solution
 
-WIP
+1. Access SIEM
+2. Click Menu (Top Left)
+3. Go to Threat Intelligence
+4. Click Threat Hunting
+5. Once in Threat Hunting Page, Go to Events tab
+6. Adjust time appropriately (from 1 year ago to now)
+7. Click add filter (Field: location; Operator: is; Value: /var/log/auth_simulated.log)
+8. As this is not "timestamp", click the "626 available fields" and toggle on for "predecoder.timestamp"
+9. Look for the correct predecoder.timestamp (Mar 14 07:51:49)
+10. Click the "Inspect document details" icon which is on the left of the timestamp
+11. Look for the ip from data.srcip
 
 #### Flag
 
@@ -376,7 +395,16 @@ None (access through SIEM)
 
 #### Solution
 
-WIP
+1. Access SIEM
+2. Click Menu (Top Left)
+3. Go to Threat Intelligence
+4. Click Threat Hunting
+5. Once in Threat Hunting Page, Go to Events tab
+6. Adjust time appropriately (from 1 year ago to now)
+7. Click add filter (Field: location; Operator: is; Value: /var/log/eve_simulated.log)
+8. Look for for word "Suricata: Alert - Nmap TCP Scan" in rule.description field
+9. Click the "Inspect document details" icon which is on the left of the timestamp
+10. Look for the ip from data.src_ip
 
 #### Flag
 
