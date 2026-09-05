@@ -2,7 +2,10 @@
 You can find the slides and all in this repository.
 
 # team cyber673
-- izdihar (@izdiwho)
+- izdihar
 - rahman
 - fauzan
-- hafiz
+- azizi
+- sadiq
+- mujib
+- nazirul
